@@ -1,4 +1,3 @@
-import math
 spacing = " "
 
 def fourbonacci(n):
@@ -23,35 +22,27 @@ def odd_squares(n):
                 counter += 1
 
 def diamond(n):
-    for i in range(0, n + 1, 2):
-        for k in range(1, n + 1):
-            spaces = n - i
-            sequence = " "
+    for i in range(1, n - 1, 2):
+        spaces = n - i
+        sequence = ""
 
-            sequence += (spacing * (spaces // 2))
+        sequence += (spacing * (spaces // 2))
             
-            for m in range(1, i):
-                sequence += str(m)
+        for m in range(1, i + 1):
+            sequence += str(m)
 
-            sequence += (spacing * (spaces // 2))
-
-            print(sequence)
-            break
+        print(sequence)
     
     for i in range(n + 1, 1, -2):
-        for k in range(1, n + 1):
-            spaces = n - i
-            sequence = " "
-            if i == n + 1:
-                sequence = ""
-
-
-            sequence += (spacing * (spaces // 2))
+        spaces = n - i
+        sequence = " "
             
-            for m in range(1, i):
-                sequence += str(m)
+        if i == n + 1:
+            sequence = ""
 
-            sequence += (spacing * (spaces // 2))
+        sequence += (spacing * (spaces // 2))
+            
+        for m in range(1, i):
+            sequence += str(m)
 
-            print(sequence)
-            break
+        print(sequence)

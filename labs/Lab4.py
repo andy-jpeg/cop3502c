@@ -86,3 +86,5 @@ def print_prime_factors(num):
             factors_list += f"{factors[factor]} * "
 
     print(factors_list)
+
+print_prime_factors(1000)
