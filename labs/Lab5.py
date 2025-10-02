@@ -30,8 +30,6 @@ def hex_string_decode(hex):
 
     for i in reversed(hex):
         result += int(hex_char_decode(i)) * (16 ** index)
-        print(result)
-
         index += 1
     
     return result
@@ -69,7 +67,7 @@ def binary_to_hex(binary):
     constructor = ""
 
     if len(binary) % 4 != 0:
-        binary += ("0" * (len(binary) % 4))
+        binary = ("0" * (len(binary) % 4)) + binary
 
     for bit in binary:
         constructor += bit
@@ -90,7 +88,6 @@ def binary_to_hex(binary):
             else:
                 sum += int(j) * (2 ** index)
 
-            print(j)
             index += 1
 
         if sum >= 10:
