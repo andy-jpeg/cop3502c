@@ -6,20 +6,20 @@ def bin(decimal):
         decimal //= 2
 
     if len(remainders) == 0:
-        return 0
+        return "0"
     else:
         newNum = ""
 
         for i in reversed(remainders):
             newNum += str(i)
 
-        return int(newNum)
+        return newNum
         
 
 def capitalize(string):
     string = string.split(" ")
 
-    index = 0
+    list = []
     newString = ""
 
     for part in string:
@@ -32,11 +32,16 @@ def capitalize(string):
             else:
                 bit = bits[0].upper() + bits[1:]
 
-        if index == len(bits):
-            newString += bit
+        list.append(bit)
+
+    index = 0
+
+    for i in list:
+        if list[index] == list[len(list) - 1]:
+            newString += i
         else:
-            newString += bit + " "
-        
+            newString += i + " "
+
         index += 1
 
     return newString
