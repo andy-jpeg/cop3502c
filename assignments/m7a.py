@@ -47,7 +47,6 @@ def partition(list, divisor):
 
     for i in range(len(list)):
         originalList.append(list[i])
-        print(len(originalList))
 
         if len(originalList) == divisor:
             totalList.append(originalList)
