@@ -1,5 +1,6 @@
 import sys
 import heifer_generator
+from dragon import Dragon
 
 arguments = sys.argv
 arguments = arguments[1:]
@@ -33,6 +34,9 @@ elif first_arg == "-n":
 
         print(message_string)
         print(cow.image)
+
+        if isinstance(cow, Dragon):
+            print("This dragon can breathe fire." if cow.can_breath_fire() else "This dragon cannot breathe fire.")
     else:
         print(f"Could not find {cow_name} cow!")
 else:
